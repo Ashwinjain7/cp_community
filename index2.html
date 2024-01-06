@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Community</title>
+    <link rel="stylesheet" href="/css/index2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Baloo+Bhaina+2&family=Bree+Serif&family=Hedvig+Letters+Serif:opsz@12..24&family=Kalnia:wght@200;300&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="/image/navlogo.png" alt="Coding World">
+        </div>
+        <ul>
+            <li class="items"><a href="#" class="active">Home</a></li>
+            <li class="items" ><a href="#">Stalklist</a></li>
+            <li class="items" ><a href="#">Freinds</a></li>
+            <li class="items" ><a href="#">ISMcommunity</a></li>
+            <li class="items"><a href="#">Contact Us</a></li>
+            <li  id="searchbox"><input type="text" name="" placeholder="Search Here"></li>
+            <li class="items logout" ><a href="#">Logout</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to</h1>
+        <h1 class="h-primary1" id="homehead"> Coding World</h1>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque placeat e</p>
+        <p class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque placeat eos sapi</p>
+    </section>
+    <section id="features">
+        <!-- <div id="ftrdescription" class="ftrfont1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A praesentium natus omnis at hic? Explicabo
+            assumenda praesentium sed dolorem tenetur minus, repellat maxime dolor perspiciatis ea, officiis, ratione
+            odit hic. Quis voluptate vitae, blanditiis sit architecto fugiat laboriosam suscipit possimus ea voluptatum
+            modi error neque repudiandae doloribus iusto odio, aut culpa quidem fuga nihil. Unde ipsa pariatur accusamus
+            minima nam explicabo aliquid natus aut voluptatem illo eum fuga, ullam, ratione quisquam libero culpa
+            aperiam nostrum omnis distinctio asperiores facilis. Nisi odio expedita voluptatem, sequi vero aperiam,
+            similique nesciunt officiis esse debitis inventore sunt quisquam accusantium magnam, repudiandae illo
+            doloremque blanditiis corrupti natus tempora eius! Maiores exercitationem porro quod harum ducimus illum ex
+            suscipit est ratione placeat optio nisi fugiat aut dignissimos, quis reprehenderit recusandae sint
+            aspernatur itaque atque commodi, quibusdam molestiae. Reiciendis quaerat non deleniti modi quidem qui fugit
+            voluptatum nesciunt eos placeat, nobis rem totam numquam dolor molestiae quam.
+        </div>
+        <div id="abtfeatures">
+        <div id="friends" class="ftrfont2">
+            <p>you can add users in your friend list and can stalk their full profile</p>
+        </div>
+        <div id="stalklist" class="ftrfont2">
+            <p>you can stalk other user profile and can add in your stalklsit </p>
+        </div>
+        <div id="ISMcommunity" class="ftrfont2">
+            <p>All the ISM students are confine in one place</p>
+        </div>
+        <div id="contest" class="ftrfont2">
+            <p>You can view your upcoming contest of Codeforces</p>
+        </div>
+        <div id="blog" class="ftrfont2">
+            <p>You can provide your opinion and experience in public with the help of blogl̥ </p>
+        </div>
+       </div> -->
+        <div class="box1 section ">
+            box1
+        </div>
+        <div class="box2 section ">
+            box2
+           
+            <div class="box3 section">
+
+                <div class="box4 section">
+                
+                    <div class="box5">
+                        box5
+                    </div>
+                    <div class="bo7 section">
+                    box7
+                    </div>
+                </div>
+                <div class="box6">
+                    box6
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container" >
+            <p class="item1">123-456-789</p>
+            <p class="item2">info@mysite.com</p>
+            <p class="item2">IIT(ISM)Dhanbad,826001</p>
+            <p class="item2">Jharkhand</p>
+        </div>
+        <div class="container">
+           <p id="item3"><a href="#" class="anch">Sign In</a></p>
+           <p id="item4"><a href="#" class="anch">Sign Up</a></p>
+        </div>
+        <div class="container">
+            cont3
+        </div>
+        <div class="container">
+          <p id="item5">follow us On</p>
+        </div>
+    </footer>
+    <script type="module" >
+
+        // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import  {getAuth , createUserWithEmailAndPassword , signOut , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCkGszuBdyX8ZBwdPNygLfEkR6b1tpQtHA",
+  authDomain: "cp-community-5c382.firebaseapp.com",
+  projectId: "cp-community-5c382",
+  storageBucket: "cp-community-5c382.appspot.com",
+  messagingSenderId: "1088755596953",
+  appId: "1:1088755596953:web:d2cb23e4b145bbb1410208"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const auth= getAuth(app)
+
+const logoutButton =document.querySelector('.logout')
+logoutButton.addEventListener('click' , () =>{
+    signOut(auth)
+    .then(()=>{
+        console.log('the user signed out')
+        window.location.href = 'index.html';
+    })
+    .catch((err)=>{
+        console.log(err.message)
+    })
+})
+
+    </script>
+</body>
+
+</html>

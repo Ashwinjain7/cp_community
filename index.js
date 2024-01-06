@@ -1,0 +1,1 @@
+var images=["code.jpg","computer.jpg",""]
